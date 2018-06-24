@@ -11,7 +11,6 @@ class Words(Resource):
         num_words = int(request.form['num'])
         words = []
         while num_words > 0:
-            print(num_words)
             words.append(words_list[random.randrange(0, stop=len(words_list))])
             num_words -= 1
         return {'words': words}
