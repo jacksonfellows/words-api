@@ -7,7 +7,7 @@ app = Flask(__name__)
 api = Api(app)
 
 class Words(Resource):
-    def put(self):
+    def post(self):
         num_words = int(request.form['num'])
         words = []
         while num_words > 0:
