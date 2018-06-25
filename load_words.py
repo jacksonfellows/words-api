@@ -10,7 +10,7 @@ def load_words():
     with open(words_file) as words:
         for word in words:
             if is_valid_word(word):
-                valid_words.append(word)
+                valid_words.append(word.strip())
 
     with open('words.pkl', 'wb') as valid_words_file:
         pickle.dump(valid_words, valid_words_file)
